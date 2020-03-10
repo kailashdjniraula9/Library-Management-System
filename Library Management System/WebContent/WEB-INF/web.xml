@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0">
+	
+	<display-name>LibraryManagementSystem</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!--mapping for the login -->
+
+	<servlet>
+		<servlet-name>loginservlet</servlet-name>
+		<servlet-class>com.library.controller.UserLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginservlet</servlet-name>
+		<url-pattern>/userLogin</url-pattern>
+	</servlet-mapping>
+
+	<!-- mapping for the users list -->
+
+	<servlet>
+		<servlet-name>usersListServlet</servlet-name>
+		<servlet-class>com.library.controller.UsersServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>usersListServlet</servlet-name>
+		<url-pattern>/users</url-pattern>
+	</servlet-mapping>
+	
+	<!-- mapping for the adding Users -->
+
+	<servlet>
+		<servlet-name>addUserServlet</servlet-name>
+		<servlet-class>com.library.controller.AddUserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>addUserServlet</servlet-name>
+		<url-pattern>/addUser</url-pattern>
+	</servlet-mapping>
+	
+	<!-- mapping for the deleting the list -->
+
+	<servlet>
+		<servlet-name>deleteUserList</servlet-name>
+		<servlet-class>com.library.controller.DeleteUserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>deleteUserList</servlet-name>
+		<url-pattern>/deleteUser</url-pattern>
+	</servlet-mapping>
+	
+	<!-- mapping for the getting data to edit the user -->
+
+	<servlet>
+		<servlet-name>getEditTheUser</servlet-name>
+		<servlet-class>com.library.controller.GetEditServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getEditTheUser</servlet-name>
+		<url-pattern>/users/getEdit</url-pattern>
+	</servlet-mapping>
+	
+	
+<!-- mapping for the updating the user -->
+
+	<servlet>
+		<servlet-name>editTheUser</servlet-name>
+		<servlet-class>com.library.controller.EditUserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>editTheUser</servlet-name>
+		<url-pattern>/users/updateUser</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- mapping for the adding Books -->
+
+	<servlet>
+		<servlet-name>addBookServlet</servlet-name>
+		<servlet-class>com.library.controller.AddBookServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>addBookServlet</servlet-name>
+		<url-pattern>/addBook</url-pattern>
+	</servlet-mapping>
+	
+	<!-- mapping for the editing the Book -->
+
+	<servlet>
+		<servlet-name>editTheBook</servlet-name>
+		<servlet-class>com.library.controller.EditBookServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>editTheBook</servlet-name>
+		<url-pattern>/users/updateBook</url-pattern>
+	</servlet-mapping>
+	
+	<!-- mapping for the books list -->
+
+	<servlet>
+		<servlet-name>usersBookServlet</servlet-name>
+		<servlet-class>com.library.controller.BooksServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>usersBookServlet</servlet-name>
+		<url-pattern>/books</url-pattern>
+	</servlet-mapping>
+	
+	<!-- mapping for the deleting the list -->
+
+	<servlet>
+		<servlet-name>deleteBookList</servlet-name>
+		<servlet-class>com.library.controller.DeleteBookServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>deleteBookList</servlet-name>
+		<url-pattern>/deleteBook</url-pattern>
+	</servlet-mapping>
+
+
+<!-- mapping for the getting data to edit the book -->
+
+	<servlet>
+		<servlet-name>getEditTheBook</servlet-name>
+		<servlet-class>com.library.controller.GetBookEditServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getEditTheBook</servlet-name>
+		<url-pattern>/books/getBookEdit</url-pattern>
+	</servlet-mapping>
+	
+	<!-- mapping for the updating the book -->
+
+	<servlet>
+		<servlet-name>updateTheBook</servlet-name>
+		<servlet-class>com.library.controller.EditUserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateTheBook</servlet-name>
+		<url-pattern>/books/updateBook</url-pattern>
+	</servlet-mapping>
+
+</web-app>
