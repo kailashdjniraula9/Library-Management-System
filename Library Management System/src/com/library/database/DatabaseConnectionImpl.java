@@ -16,7 +16,7 @@ public class DatabaseConnectionImpl implements DatabaseConnection {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lms", "root", "");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lms?serverTimezone=UTC", "root", "");
 			System.out.println("Connected to Mysql Database");
 
 			statement = connection.createStatement();

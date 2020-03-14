@@ -32,6 +32,7 @@ public class UserLoginServlet extends HttpServlet {
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException {
 
+	
 		//communication in web occurs in string so "username"
 		//data comes as 'request'
 		String username = request.getParameter("username");
